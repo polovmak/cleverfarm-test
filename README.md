@@ -26,3 +26,11 @@ The logic with fetching will be placed in api folder. On initial load we will fe
 ### Styling
 
 Provide palette for theming via Material ui styles.
+
+### Localisation
+
+Add localisation for multiple languages.
+
+### Loading
+
+Loading in case of long fetching/rendering. Skeleton can be used also.

@@ -20,7 +20,7 @@ const SensorDetailsPage = () => {
     }
   }, [navigate, sensorId]);
 
-  return (
+  return sensor ? (
     <SensorDetailsLayout
       sensorInformation={
         <Grid
@@ -37,15 +37,17 @@ const SensorDetailsPage = () => {
             </Button>
           </Grid>
           <Grid item xs={12} md={8}>
-            <h1>{sensor?.name}</h1>
+            <h1>{sensor.name}</h1>
           </Grid>
           <Grid item xs={12} md={2}>
-            <h5>{`${sensor?.coordinates[0]}  ${sensor?.coordinates[1]}`}</h5>
+            <h5>{`${sensor.coordinates[0]}  ${sensor.coordinates[1]}`}</h5>
           </Grid>
         </Grid>
       }
       map={sensor ? <MapComponent coordinates={sensor.coordinates} /> : <></>}
     />
+  ) : (
+    <>Something is wrong with data</>
   );
 };
 
