@@ -1,5 +1,10 @@
 # CleverFarm Test Assignment
 
+## Run Project
+
+- npm install
+- npm run dev
+
 ## Used Technologies
 
 - React: main frontend library
